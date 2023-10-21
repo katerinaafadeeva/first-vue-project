@@ -19,6 +19,7 @@ import PostItem from "@/components/PostItem.vue";
 
 export default {
   components: { PostItem },
+  // пропсы регистрируются здесь при передаче из родительского app
   props: {
     posts: {
       type: Array,

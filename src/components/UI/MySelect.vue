@@ -10,6 +10,7 @@
 <script>
 export default {
   name: "my-select",
+  // пропсы options пришли из родителя app / откуда и куда идет modelValue?
   props: {
     modelValue: {
       type: String,
@@ -21,6 +22,7 @@ export default {
   },
   methods: {
     changeOption(e) {
+      // ??? еще раз разобраться с modelValue-> эмитим метод,чтобы он передавал инфу родителю app
       this.$emit("update:modelValue", e.target.value);
     },
   },

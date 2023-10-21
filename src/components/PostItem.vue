@@ -7,8 +7,18 @@
     </div>
 
     <div class="delete-div">
-      <my-button type="button" class="del-btn" @click="$emit('remove', post)"
-        >delete</my-button
+      <my-button
+        type="button"
+        class="del-btn"
+        @click="$router.push(`/posts/${post.id}`)"
+        >открыть</my-button
+      >
+      <my-button
+        type="button"
+        class="del-btn"
+        @click="$emit('remove', post)"
+        style="background-color: red"
+        >удалить</my-button
       >
     </div>
   </div>
@@ -19,6 +29,7 @@ import MyButton from "./UI/MyButton.vue";
 export default {
   components: { MyButton },
   props: {
+    // пропсы прошли из родителя и мы принимает объект:
     post: {
       type: Object,
       required: true,

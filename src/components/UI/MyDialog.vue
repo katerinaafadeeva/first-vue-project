@@ -10,6 +10,7 @@
 export default {
   name: "my-dialog",
   props: {
+    // пропс передан с родительского app через директиву v-model:
     show: {
       type: Boolean,
       default: false,

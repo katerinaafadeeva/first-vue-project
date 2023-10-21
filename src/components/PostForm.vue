@@ -26,8 +26,10 @@ export default {
     };
   },
   methods: {
+    // мы передали метод на родителе App:
     addPost() {
       this.post.id = Date.now();
+      // addPost объявляется на родителе и эмитится:
       this.$emit("create", this.post);
       this.post = {
         title: " ",
